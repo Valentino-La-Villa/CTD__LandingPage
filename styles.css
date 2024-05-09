@@ -1,0 +1,336 @@
+* {
+    box-sizing: border-box;
+    color: white;
+    font-family: "IBM Plex Mono", "Roboto Mono", monospace;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    background: linear-gradient(245deg, #31494e 0%, #385e70 25%, #131313 75%);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* HEADER */
+
+header {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+header a {
+    border: 2px solid transparent;
+    border-radius: 3px;
+    color: white;
+    padding: 2px;
+    text-decoration: none;
+    transition: color 0.5s ease, 
+                background-color 0.5s ease, 
+                border-color 0.5s ease;
+}
+
+.navbar li:hover a {
+    background-color: white;
+    border-color: white;
+    color: black;
+    text-decoration: underline;
+}
+
+.navbar > ul {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    list-style: none;
+}
+
+.logo {
+    border: 1px white solid;
+    border-radius: 3px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#burger-menu-icon {
+    color: white;
+    cursor: pointer;
+    display: none;
+    font-size: 4rem;
+    padding: 0;
+    z-index: 101;
+}
+
+#burger-menu-toggle {
+    display: none;
+}
+
+.menu-icon-action {
+    display: none;
+}
+
+/* HERO SECTION */
+
+.hero {
+    align-items: center;
+    color: white;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    min-height: 100vh;
+    padding: 0 5%;
+    position: relative;
+    width: 100%;
+}
+
+.hero-text h5 {
+    font-size: 0.9rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.hero-text h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.hero-text h1 {
+    font-family: "Roboto Mono", monospace;
+    font-size: 2.5rem;
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+.hero-text p {
+    font-size: 80%;
+    margin-bottom: 1.5rem;
+}
+
+.hero-text a {
+    border-radius: 1.90rem;
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.4;
+    padding: 0.95rem 1.9rem;
+    text-transform: uppercase;
+    transition: transform .5s ease;
+}
+
+.hero-text a:hover {
+    background-color: transparent;
+    border-color: white;
+    transform: translateX(3px);
+}
+
+.resume {
+    border: 1px solid transparent;
+    background-color: #4d4d4d;
+}
+
+.portfolio {
+    background-color: transparent;
+    border: 1px solid white;
+    margin-left: 1.3rem;
+}
+
+.hero-img img {
+    height: 28rem;
+    margin: 10% 0 0 10%;
+    transition: transform 2s ease, opacity 2s linear;
+}
+
+.hero-img img:hover {
+    transform: scale(110%) rotate(3deg);
+}
+
+
+/* ICONS */
+
+.icons {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1%;
+    position: absolute;
+    top: 50vh;
+    transform: translateY(-50%);
+}
+
+.icons > a {
+    margin: 1.5rem 0;
+}
+
+.icons > a > div {
+    font-size: 1.5rem;
+    transition: transform .5s ease, color .5s ease;
+}
+
+.icons > a div:hover {
+    color: rgb(218, 218, 218);
+    transform: scale(115%);
+}
+
+.scroll-down {
+    cursor: pointer;
+    position: absolute;
+    right: 1.5%;
+    bottom: 3%;
+}
+
+.scroll-down > div {
+    background-color: #21383d;
+    border-radius: 60000px;
+    font-size: 2rem;
+    padding: 12px;
+    transition: transform 0.5s ease;
+}
+
+.scroll-down > div:hover {
+    transform: translateY(-5px);
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 3841px) {
+    :root {
+        font-size: 53px;
+    }
+}
+
+@media screen and (max-width: 3600px) {
+    :root {
+        font-size: 45px;
+    }
+}
+
+@media screen and (max-width: 3200px) {
+    :root {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 2900px) {
+    :root {
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width: 2500px) {
+    :root {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 2000px) {
+    :root {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 1441px) {
+    :root {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1201px) {
+    :root {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    :root {
+        font-size: 18px;
+    }
+
+    .icons {
+        display: none;
+    }
+
+    .hero {
+        margin-top: 15%;
+        padding: 0 2%;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-img {
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-img img {
+        margin: 0;
+    }
+
+
+    #burger-menu-icon {
+        display: block;
+    }
+    
+
+    .menu-icon-action {
+        display: block;
+    }
+
+    .navlist {
+        background-color: #021719ef;
+        flex-direction: column;
+        align-items: end;
+        height: 16rem;
+        padding: 1rem 2rem;
+        position: absolute;
+        right: -100%;
+        top: 100%;
+        transition: all 1s ease;
+        width: 13rem;
+    }
+
+    #burger-menu-toggle:checked + label.menu-icon-action + ul {
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    :root {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    :root {
+        font-size: 12px;
+    }
+    .hero-img {
+        align-self: self-start;
+    }
+}
+
+@media screen and (max-width: 471px) {
+    :root {
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    :root {
+        font-size: 6px;
+    }
+}
