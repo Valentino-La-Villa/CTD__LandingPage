@@ -46,15 +46,18 @@ header a {
     text-decoration: underline;
 }
 
-.navbar > ul {
+.navbar .navlist {
     display: flex;
     gap: 3rem;
     justify-content: center;
     list-style: none;
 }
 
+.navlist.open {
+    right: 0;
+}
+
 .logo {
-    border: 1px white solid;
     border-radius: 3px;
     font-size: 1.5rem;
     font-weight: bold;
@@ -301,10 +304,6 @@ header a {
         top: 100%;
         transition: all 1s ease;
         width: 13rem;
-    }
-
-    #burger-menu-toggle:checked + label.menu-icon-action + ul {
-        right: 0;
     }
 }
 
